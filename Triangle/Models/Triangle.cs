@@ -20,18 +20,29 @@ namespace Epicodus.Shapes
       }
       return true;
     }
-    /*  checkType() {
-        if ((this.side1 > (this.side2 + this.side3)) || (this.side2 > (this.side1 + this.side3)) || (this.side3 > (this.side1 + this.side2))) {
-          return "not a triangle";
-        } else if ((this.side1 !== this.side2) && ((this.side1 !== this.side3)) && ((this.side2 !== this.side3))) {
-          return "scalene triangle";
-        }  else if ((this.side1 === this.side2) && (this.side1 === this.side3)) {
-          return "equilateral triangle";
-        } else {
-          return "isosceles triangle";
-        }
-      }    
-    }  */
 
+    public bool IsAScalene()
+    {
+      if (IsATriangle() && (A != B && A != C && B != C)) {
+        return true;
+      }
+      return false;
+    }
+
+    public bool IsAnEquilateral()
+    {
+      if (IsATriangle() && (A == B && B == C)) {
+        return true;
+      }
+      return false;
+    }
+
+    public bool IsAnIsosceles()
+    {
+      if (IsATriangle() && !IsAScalene() && !IsAEquilateral()) {
+        return true;
+      }
+      return false;
+    }
   }
 }
