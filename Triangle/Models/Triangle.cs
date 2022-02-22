@@ -15,7 +15,10 @@ namespace Epicodus.Shapes
 
     public bool IsATriangle()
     {
-      return true;
+      if (A > (B+C) || B > (A+C) || C > (A+B)) {
+        return false;
+      }
+      return false;
     }
     /*  checkType() {
         if ((this.side1 > (this.side2 + this.side3)) || (this.side2 > (this.side1 + this.side3)) || (this.side3 > (this.side1 + this.side2))) {
