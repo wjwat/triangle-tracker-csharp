@@ -26,5 +26,11 @@ namespace Epicodus.Shapes.Tests
     {
       Assert.AreEqual(SideC, t.C);
     }
+    [TestMethod]
+    public void IsATriangle_CheckSides_False()
+    {
+      Triangle NotATriangle = new Triangle(3, 9, 22);
+      Assert.AreEqual(false, NotATriangle.IsATriangle());
+    }
   }
 }
