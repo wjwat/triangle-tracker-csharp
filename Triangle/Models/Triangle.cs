@@ -8,9 +8,9 @@ namespace Epicodus.Shapes
 
     public Triangle(int a, int b, int c)
     {
-      A = 0;
-      B = 0;
-      C = 0;
+      A = a;
+      B = b;
+      C = c;
     }
   }
 }
