@@ -18,7 +18,7 @@ namespace Epicodus.Shapes
       if (A > (B+C) || B > (A+C) || C > (A+B)) {
         return false;
       }
-      return false;
+      return true;
     }
     /*  checkType() {
         if ((this.side1 > (this.side2 + this.side3)) || (this.side2 > (this.side1 + this.side3)) || (this.side3 > (this.side1 + this.side2))) {
